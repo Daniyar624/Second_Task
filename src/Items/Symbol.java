@@ -1,11 +1,22 @@
 package Items;
 
+import java.util.List;
 
+public class Symbol {
 
-public class Symbol extends Item {
+    private Character character;
 
-
-    public Symbol(String item) {
-        super(item);
+    public Symbol (Character character){
+        this.character = character;
     }
+
+    public Character getCharacter(){
+        return character;
+    }
+
+    public String toString() {
+        return String.valueOf(character);
+    }
+
+
 }
