@@ -18,7 +18,6 @@ public class Sentence {
         StringBuilder sb = new StringBuilder();
         for(SentencePart sentencePart : sentenceParts){
             sb.append(sentencePart.toString());
-            sb.append(" ");
         }
         return sb.toString();
     }

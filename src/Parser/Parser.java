@@ -3,6 +3,7 @@ package Parser;
 import Items.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Parser {
 
@@ -25,7 +26,7 @@ public class Parser {
     }
 
     public Sentence parseSentence (String text){
-        String[] list = text.split("\\s");
+        String[] list = text.split("\\b");
         List<SentencePart> sentenceParts = new ArrayList<>();
         for (String text1 : list) {
             sentenceParts.add(parseSentencePart(text1));
@@ -33,22 +34,11 @@ public class Parser {
         return new Sentence(sentenceParts);
     }
 
-     public SentencePart parseSentencePart(String text1){
-        String[] listStr = text1.split("");
-
-        char[] listChar = new char[listStr.length];
-
-           for (int i=0; i< listStr.length; i++){
-             listChar[i] = listStr[i].charAt(0);
-         }
-
-
-        List<Symbol> symbols = new ArrayList<>();
-        for (int i=0; i< listChar.length; i++){
-            symbols.add(new Symbol(listChar[i]));
-        }
-
-        return new SentencePart(symbols);
+     public SentencePart parseSentencePart(String sentencePart){
+        return new SentencePart(sentencePart.chars()
+            .mapToObj(c -> (char) c)
+            .map(Symbol::new)
+            .collect(Collectors.toList()));
    }
 
 
