@@ -1,9 +1,9 @@
-package Boot;
-import Items.Text;
-import Parser.Parser;
-import Reader.Reader;
+package boot;
+import items.Text;
+import parser.Parser;
+import reader.Reader;
 import java.io.IOException;
-
+import tools.DeleteConsonants;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -13,5 +13,8 @@ public class Main {
         Parser parser = new Parser();
         Text text = parser.parseText(sourceText);
         System.out.println(text);
+
+        DeleteConsonants deleteConsonants = new DeleteConsonants();
+        System.out.println(deleteConsonants.initiate_deletion(sourceText, 3));
     }
 }

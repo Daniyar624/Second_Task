@@ -1,10 +1,11 @@
-package Items;
+package items;
 
 import java.util.List;
 
 public class SentencePart {
 
     private List<Symbol> symbols;
+
     public SentencePart(List<Symbol> symbols){
         this.symbols=symbols;
     }
@@ -20,5 +21,4 @@ public class SentencePart {
         }
         return sb.toString();
     }
-
 }

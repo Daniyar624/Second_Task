@@ -1,5 +1,6 @@
-package Items;
+package items;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Text {
@@ -22,6 +23,4 @@ public class Text {
         }
         return sb.toString();
     }
-
-
 }

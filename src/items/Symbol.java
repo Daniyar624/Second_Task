@@ -1,6 +1,4 @@
-package Items;
-
-import java.util.List;
+package items;
 
 public class Symbol {
 
@@ -17,6 +15,4 @@ public class Symbol {
     public String toString() {
         return String.valueOf(character);
     }
-
-
 }
