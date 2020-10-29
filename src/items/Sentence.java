@@ -1,6 +1,5 @@
 package items;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Sentence {
@@ -21,5 +20,23 @@ public class Sentence {
             sb.append(sentencePart.toString());
         }
         return sb.toString();
+    }
+
+    public void delete(int length){
+        sentenceParts.removeIf(sentencePart -> sentencePart.toString().length()==length && !(isVowel(sentencePart.toString())));
+    }
+
+    private boolean isVowel (String word) {
+        switch(word.toLowerCase().charAt(0)) {
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+            case 'y':
+                return true;
+            default:
+                return false;
+        }
     }
 }

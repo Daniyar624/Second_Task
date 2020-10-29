@@ -1,6 +1,5 @@
 package items;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Paragraph {
@@ -20,5 +19,10 @@ public class Paragraph {
             sb.append(sentence.toString());
         }
         return sb.toString();
+    }
+    public void delete(int length){
+        for (Sentence sentence : sentences){
+            sentence.delete(length);
+        }
     }
 }

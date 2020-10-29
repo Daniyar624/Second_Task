@@ -23,4 +23,11 @@ public class Text {
         }
         return sb.toString();
     }
+
+    public void delete(int length){
+        for (Paragraph paragraph : paragraphs){
+           paragraph.delete(length);
+        }
+    }
+
 }
