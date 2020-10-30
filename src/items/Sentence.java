@@ -22,7 +22,7 @@ public class Sentence {
         return sb.toString();
     }
 
-    public void delete(int length){
+    public void deleteWordsGivenLengthStartingConsonants(int length){
         sentenceParts.removeIf(sentencePart -> sentencePart.toString().length()==length && !(isVowel(sentencePart.toString())));
     }
 

@@ -20,9 +20,9 @@ public class Paragraph {
         }
         return sb.toString();
     }
-    public void delete(int length){
+    public void deleteWordsGivenLengthStartingConsonants(int length){
         for (Sentence sentence : sentences){
-            sentence.delete(length);
+            sentence.deleteWordsGivenLengthStartingConsonants(length);
         }
     }
 }

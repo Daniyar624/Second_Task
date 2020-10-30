@@ -13,9 +13,9 @@ public class Main {
         Parser parser = new Parser();
         Text text = parser.parseText(sourceText);
         System.out.println(text);
-        System.out.println(text.toString().equals(sourceText));
-        text.delete(9);
-        System.out.println(text);
-        System.out.println(text.toString().equals(sourceText));
+        System.out.println(text.toString().equals(sourceText) ? "Parsed text equals to the original one. Po kaifu." : "Parsed text does not equal to the original one. Otstoy:(");
+        text.deleteWordsGivenLengthStartingConsonants(9);
+        System.out.println("\n" + text);
+
     }
 }
